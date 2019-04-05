@@ -1,0 +1,6 @@
+ejercicio 1.2
+select nombre, apellido, sueldo, e_mail
+from empleado
+where sueldo > 1000 and e_mail LIKE '%@gmail.com'
+order by sueldo
+limit 100
