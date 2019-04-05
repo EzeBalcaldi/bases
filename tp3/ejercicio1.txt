@@ -22,3 +22,20 @@ select  nombre ||' '|| apellido as nombre_apellido, extract(day from fecha_nacim
 from empleado
 order by fecha_nacimiento ASC
 limit 50
+
+ejercicio 1.6
+select apellido, id_empleado, porc_comision
+from empleado
+where porc_comision is null
+limit 50
+
+ejercicio 1.7
+select nombre, direccion, telefono, tipo
+from distribuidor
+where tipo ='I' and telefono is null
+
+ejercicio 1.6
+select apellido as apellido, nombre as nombre, e_mail as "direccion de email"
+from empleado
+where telefono like '600%'
+limit 30
