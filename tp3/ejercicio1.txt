@@ -4,3 +4,9 @@ from empleado
 where sueldo > 1000 and e_mail LIKE '%@gmail.com'
 order by sueldo
 limit 100
+
+ejercicio 1.3
+select id_tarea
+from empleado
+group by id_tarea
+order by id_tarea ASC
