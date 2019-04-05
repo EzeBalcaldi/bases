@@ -10,3 +10,9 @@ select id_tarea
 from empleado
 group by id_tarea
 order by id_tarea ASC
+
+ejercicio 1.4
+select nombre, apellido, telefono, id_tarea
+from empleado
+where id_tarea = '7231'
+order by apellido, nombre
