@@ -16,3 +16,9 @@ select nombre, apellido, telefono, id_tarea
 from empleado
 where id_tarea = '7231'
 order by apellido, nombre
+
+ejercicio 1.5
+select  nombre ||' '|| apellido as nombre_apellido, extract(day from fecha_nacimiento) as dia, extract(month from fecha_nacimiento) as mes
+from empleado
+order by fecha_nacimiento ASC
+limit 50
