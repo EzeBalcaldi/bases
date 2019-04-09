@@ -1,0 +1,72 @@
+ejercicio 1.2
+select nombre, apellido, sueldo, e_mail
+from empleado
+where sueldo > 1000 and e_mail LIKE '%@gmail.com'
+order by sueldo
+limit 100
+
+ejercicio 1.3
+select id_tarea
+from empleado
+group by id_tarea
+order by id_tarea ASC
+
+ejercicio 1.4
+select nombre, apellido, telefono, id_tarea
+from empleado
+where id_tarea = '7231'
+order by apellido, nombre
+
+ejercicio 1.5
+select  nombre ||' '|| apellido as nombre_apellido, extract(day from fecha_nacimiento) as dia, extract(month from fecha_nacimiento) as mes
+from empleado
+order by fecha_nacimiento ASC
+limit 50
+
+ejercicio 1.6
+select apellido, id_empleado, porc_comision
+from empleado
+where porc_comision is null
+limit 50
+
+ejercicio 1.7
+select nombre, direccion, telefono, tipo
+from distribuidor
+where tipo ='I' and telefono is null
+
+ejercicio 1.8
+select apellido as apellido, nombre as nombre, e_mail as "direccion de email"
+from empleado
+where telefono like '600%'
+limit 30
+
+ejercicio 1.9
+select idioma, COUNT(codigo_pelicula) AS "cantidad de peliculas"
+from pelicula
+group by idioma
+order by idioma
+limit 100
+
+ejercicio 1.10
+select id_departamento, COUNT(id_empleado) AS "cantidad de empleado por departamento"
+from empleado
+group by id_departamento
+order by id_departamento
+limit 100
+
+ejercico 1.11 este no se si esta bien xd
+select p.codigo_pelicula, r.nro_entrega
+from pelicula p, renglon_entrega r
+WHERE p.codigo_pelicula = r.codigo_pelicula AND r.nro_entrega BETWEEN 3 AND 5
+limit 100
+
+ejercicio 2.1
+SELECT apellido,nro_voluntario
+from voluntario
+where id_coordinador is null
+
+ejerercicio 2.2 no estas terminado weyyyy
+select apellido, horas_aportadas
+from voluntario v, tarea t
+where t.nombre_tarea in ('ATENCION DE ROPERITOS', 'ORGANIZACION CAMPAMENTOS RECREATIVOS')
+and horas_aportadas not in (7500, 3000, 2500)
