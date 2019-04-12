@@ -1,0 +1,7 @@
+select distinct v.* 
+from renglon_entrega re join pelicula p on (p.codigo_pelicula = re.codigo_pelicula)
+                        join entrega e on (re.nro_entrega = e.nro_entrega)
+                        join video v on (e.id_video = v.id_video)
+where extract(year from e.fecha_entrega) = 2006
+and p.idioma = 'Inglés'
+order by 1
